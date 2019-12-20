@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "url"
+  ],
+  "properties": {
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "The URL where you retrieve the loan application form",
+      "default": "",
+      "examples": [
+        "http://<host>:<port>/resources/loan-application-form.pdf"
+      ],
+      "pattern": "^https?://(.*)$"
+    }
+  }
+}

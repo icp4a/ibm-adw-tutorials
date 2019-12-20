@@ -1,0 +1,215 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "rulesetPath",
+    "htdsRestEndpoint",
+    "data",
+    "recommendation"
+  ],
+  "properties": {
+    "rulesetPath": {
+      "$id": "#/properties/rulesetPath",
+      "type": "string"
+    },
+    "htdsRestEndpoint": {
+      "$id": "#/properties/htdsRestEndpoint",
+      "type": "string"
+    },
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "required": [
+        "score",
+        "grade",
+        "report",
+        "__DecisionID__"
+      ],
+      "properties": {
+        "score": {
+          "$id": "#/properties/data/properties/score",
+          "type": "integer"
+        },
+        "grade": {
+          "$id": "#/properties/data/properties/grade",
+          "type": "string"
+        },
+        "report": {
+          "$id": "#/properties/data/properties/report",
+          "type": "object",
+          "required": [
+            "borrower",
+            "loan",
+            "validData",
+            "insuranceRequired",
+            "insuranceRate",
+            "approved",
+            "messages",
+            "yearlyInterestRate",
+            "monthlyRepayment",
+            "insurance",
+            "message",
+            "yearlyRepayment"
+          ],
+          "properties": {
+            "borrower": {
+              "$id": "#/properties/data/properties/report/properties/borrower",
+              "type": "object",
+              "required": [
+                "firstName",
+                "lastName",
+                "birth",
+                "SSN",
+                "yearlyIncome",
+                "zipCode",
+                "creditScore",
+                "spouse",
+                "latestBankruptcy"
+              ],
+              "properties": {
+                "firstName": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/firstName",
+                  "type": "string"
+                },
+                "lastName": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/lastName",
+                  "type": "string"
+                },
+                "birth": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/birth",
+                  "type": "string"
+                },
+                "SSN": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/SSN",
+                  "type": "object",
+                  "required": [
+                    "areaNumber",
+                    "groupCode",
+                    "serialNumber"
+                  ],
+                  "properties": {
+                    "areaNumber": {
+                      "$id": "#/properties/data/properties/report/properties/borrower/properties/SSN/properties/areaNumber",
+                      "type": "string"
+                    },
+                    "groupCode": {
+                      "$id": "#/properties/data/properties/report/properties/borrower/properties/SSN/properties/groupCode",
+                      "type": "string"
+                    },
+                    "serialNumber": {
+                      "$id": "#/properties/data/properties/report/properties/borrower/properties/SSN/properties/serialNumber",
+                      "type": "string"
+                    }
+                  }
+                },
+                "yearlyIncome": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/yearlyIncome",
+                  "type": "integer"
+                },
+                "zipCode": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/zipCode",
+                  "type": "string"
+                },
+                "creditScore": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/creditScore",
+                  "type": "integer"
+                },
+                "spouse": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/spouse",
+                  "type": "null"
+                },
+                "latestBankruptcy": {
+                  "$id": "#/properties/data/properties/report/properties/borrower/properties/latestBankruptcy",
+                  "type": "null"
+                }
+              }
+            },
+            "loan": {
+              "$id": "#/properties/data/properties/report/properties/loan",
+              "type": "object",
+              "required": [
+                "numberOfMonthlyPayments",
+                "startDate",
+                "amount",
+                "loanToValue"
+              ],
+              "properties": {
+                "numberOfMonthlyPayments": {
+                  "$id": "#/properties/data/properties/report/properties/loan/properties/numberOfMonthlyPayments",
+                  "type": "integer"
+                },
+                "startDate": {
+                  "$id": "#/properties/data/properties/report/properties/loan/properties/startDate",
+                  "type": "string"
+                },
+                "amount": {
+                  "$id": "#/properties/data/properties/report/properties/loan/properties/amount",
+                  "type": "integer"
+                },
+                "loanToValue": {
+                  "$id": "#/properties/data/properties/report/properties/loan/properties/loanToValue",
+                  "type": "number"
+                }
+              }
+            },
+            "validData": {
+              "$id": "#/properties/data/properties/report/properties/validData",
+              "type": "boolean"
+            },
+            "insuranceRequired": {
+              "$id": "#/properties/data/properties/report/properties/insuranceRequired",
+              "type": "boolean"
+            },
+            "insuranceRate": {
+              "$id": "#/properties/data/properties/report/properties/insuranceRate",
+              "type": "number"
+            },
+            "approved": {
+              "$id": "#/properties/data/properties/report/properties/approved",
+              "type": "boolean"
+            },
+            "messages": {
+              "$id": "#/properties/data/properties/report/properties/messages",
+              "type": "array",
+              "items": {
+                "$id": "#/properties/data/properties/report/properties/messages/items",
+                "type": "string"
+              }
+            },
+            "yearlyInterestRate": {
+              "$id": "#/properties/data/properties/report/properties/yearlyInterestRate",
+              "type": "number"
+            },
+            "monthlyRepayment": {
+              "$id": "#/properties/data/properties/report/properties/monthlyRepayment",
+              "type": "number"
+            },
+            "insurance": {
+              "$id": "#/properties/data/properties/report/properties/insurance",
+              "type": "string"
+            },
+            "message": {
+              "$id": "#/properties/data/properties/report/properties/message",
+              "type": "string"
+            },
+            "yearlyRepayment": {
+              "$id": "#/properties/data/properties/report/properties/yearlyRepayment",
+              "type": "number"
+            }
+          }
+        },
+        "__DecisionID__": {
+          "$id": "#/properties/data/properties/__DecisionID__",
+          "type": "string"
+        }
+      }
+    },
+    "recommendation": {
+      "$id": "#/properties/recommendation",
+      "type": "string"
+    }
+  }
+}
